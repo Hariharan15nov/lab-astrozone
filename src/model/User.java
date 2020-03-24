@@ -1,5 +1,5 @@
 package model;
-import java.util.Date;
+import java.time.LocalDate;
 //Type your code here
 class User{
 	String name;

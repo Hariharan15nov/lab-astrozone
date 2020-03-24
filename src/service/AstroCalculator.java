@@ -1,49 +1,60 @@
+package service;
+import java.time.*;
+import java.util.*;
+// Type your code
+
 public class AstroCalculator
 {
 	public String findSign(model.User u)
 	{
 		int d=u.dob;
+		LocalDate birthday = new LocalDate(d);
+		LocalDate now = LocalDate.now();
+		Period diff = Period.between(pdate, now);
 		int DOB[]=d.split("/");
 	   int date=DOB[0];
 	   int month=DOB[1];
+	   System.out.println("Your details");
+	   System.out.println("Name: "+u.name);
+	   System.out.println("Age: "+diff.getYears());
 		if ((date>21 && month == 12) || (date<=19 && month== 1)){
-	           return  "Capricon";
+	           System.out.println( "Capricon");
 	       }
 	       if ((date>20 && month ==1) || (date<=18 && month == 2)){
-	           return "Aquarius";
+	    	   System.out.println( "Aquarius");
 	       }
 	       if ((date>19 && month == 2) || (date <=20 && month == 3)){
-	           return "Pisces";
+	    	   System.out.println("Pisces");
 	       }
 	       if ((date>21 && month == 3) || (date <=20 && month == 4)){
-	           return "aries";
+	    	   System.out.println( "aries");
 	       }
 	       if ((date>21 && month == 4) || (date <=20 && month == 5)){
-	           return "Taurus";
+	    	   System.out.println("Taurus");
 	       }
 	       if ((date>21 && month == 5) || (date<=20 && month == 6)){
-	           return "Gemini";
+	    	   System.out.println("Gemini");
 	       }
 	       if ((date>21 && month == 6) || (date<=20 && month == 7)){
-	           return "Cancer";
+	    	   System.out.println( "Cancer");
 	       }
 	       if ((date>21 && month  == 7) || (date<=20 && month== 8)){
-	           return "Leo";
+	    	   System.out.println( "Leo");
 	       }
 	       if ((date>21 && month ==8) || (date<=22 && month == 9)){
-	           return "Virgo";
+	    	   System.out.println( "Virgo");
 	       }
 	       if ((date>23 && month == 9) || (date<=20 && month ==10)){
-	           return "Libra";
+	    	   System.out.println( "Libra");
 	       }
 	       if ((date>21 && month == 10) || (date<=22 && month == 11)){
-	           return "Scorpio";
+	    	   System.out.println("Scorpio");
 	       }
 	       if ((date>23 && month == 11) || (date<=20 && month == 12)){
-	           return "Sagitarius";
+	    	   System.out.println( "Sagitarius");
 	       }
 	       else
-	    	   return  "Should enter all the values";	
+	    	   System.out.println( "Should enter all the values");	
 	}
 	
 }
