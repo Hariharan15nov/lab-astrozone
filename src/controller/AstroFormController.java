@@ -87,6 +87,6 @@ public class AstroFormController extends HttpServlet {
 			RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/Outputview.jsp");
 			request.setAttribute("astro", "<img src='./assets/virgo.svg'>");
 			rd.forward(request, response);
-		}
+		}	
 	}
 }
